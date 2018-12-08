@@ -100,7 +100,8 @@
 </template>
 
 <script>
-  import heroesAPI from '../assets/js/heroesAPI'
+  import heroesAPI from '../assets/js/heroesAPI';
+  import $ from 'jquery';
   import _ from 'lodash';
 
 
@@ -150,7 +151,9 @@ export default {
               return _class.id == _self.hero.class_id;
             })[0];
 
-            console.log("dados heroi ", _self.hero);
+            $("#loading").hide();
+            $("#pageTitle").text("Editar Herói");
+
           })
         }
         //criaçao, parametros inciais
@@ -158,6 +161,9 @@ export default {
 
           this.hero.specialties = [this.specialtiesList[0]];
           this.selectedClass =  this.classesList[0];
+
+          $("#loading").hide();
+          $("#pageTitle").text("Novo Herói");
         }
       }
     },
@@ -196,7 +202,6 @@ export default {
 
             API.saveHeroPhoto(uploadedFile, function(data){
 
-              console.log("and finally data ", data);
               _self.hero.photos.push(data[0].imageId);
               event.target.value = '';
               _self.$toastr('success', 'Imagem salva com sucesso.');
@@ -292,7 +297,6 @@ export default {
       }
 
       if(typeof formHero.health_points == 'string') formHero.health_points = parseFloat(formHero.health_points.trim().replace(/,/g, '.') );
-      console.log( formHero.health_points );
       if (isNaN(formHero.health_points)) {
 
         erros.push("Valor para Vida deve ser numérico.");
@@ -346,6 +350,8 @@ export default {
   mounted: function() {
 
     var _self = this;
+
+    $("#loading").show();
 
     //carregando inicialmente lista de especialidades
     API.getHeroSpecialties(function(_data){

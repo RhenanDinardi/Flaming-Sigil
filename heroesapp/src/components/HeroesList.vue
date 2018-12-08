@@ -75,7 +75,7 @@
           <td><p>{{hero.movement_speed}}</p></td>
           <td>
             <p>
-              <i class="material-icons btn-action" title="Excluir herói">delete</i>
+              <i class="material-icons btn-action" title="Excluir herói" data-toggle="modal" data-target="#deleteModal" v-on:click="pickHeroToDelete(hero)">delete</i>
               <i class="material-icons btn-action" title="Editar herói" v-on:click="goToHero(hero.id)">edit</i>
             </p>
           </td>
@@ -89,16 +89,44 @@
       </table>
     </div>
 
+    <!-- Modal de confirmaçao de exclusao-->
+    <div class="modal fade" id="deleteModal" tabindex="-1" role="dialog" aria-labelledby="deleteModal">
+      <div class="modal-dialog modal-dialog-centered" role="document">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title" id="exampleModalCenterTitle">Confirmar exclusão do herói</h5>
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+              <span aria-hidden="true">&times;</span>
+            </button>
+          </div>
+          <div class="modal-body">
+            Tem certeza que deseja excluir <b>{{selectedDeleteHero.name}}</b> da guilda?
+            Seus dados não poderão ser recuperados.
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-secondary" data-dismiss="modal">
+              <i class="material-icons">keyboard_return</i>Cancelar
+            </button>
+            <button type="button" class="btn btn-danger" v-on:click="deleteHero">
+              <i class="material-icons">delete_forever</i>Excluir Herói
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+
   </div>
 </template>
 
 <script>
-  import heroesAPI from '../assets/js/heroesAPI'
+  import heroesAPI from '../assets/js/heroesAPI';
+  import $ from 'jquery';
   import _ from 'lodash';
 
 
   //inicializando API
   const API = new heroesAPI();
+  const deleteModal = $("#deleteModal");
 
 export default {
   name: 'HeroesList',
@@ -118,6 +146,7 @@ export default {
         attack_speed: '',
         movement_speed: ''
       },
+      selectedDeleteHero: {}
     }
   },
   methods: {
@@ -159,6 +188,34 @@ export default {
     },
 
     /**
+     * @description Busca lista de herois e faz tratamentos de valores para bind de tela
+     * @param _callback callback opcional para ser chamado apos listagem
+     */
+    getHeroesList: function (_callback){
+
+      var _self = this;
+
+      //carregando inicialmente lista de heroes
+      API.getHeroList(function(_data){
+
+        _self.heroes = _data;
+
+        //busca imagem dinamica de cada heroi
+        _self.heroes.forEach(function(hero, index){
+
+          hero.displayPhoto = API.apiHost + API.methods.heroPhoto + '/' + hero.photos[0];
+          hero.specialty_name = hero.specialties[0].name;
+        });
+
+        _self.viewHeroes = _.cloneDeep(_self.heroes)
+
+        _callback && _callback();
+
+      });
+
+    },
+
+    /**
      * @description Redireciona para criaçao/ediçao de um heroi
      * @param _id id do heroi a ser editado, se nulo, vai ser criaçao
      */
@@ -170,27 +227,43 @@ export default {
       else{
         this.$router.push('Edit/' + _id);
       }
+    },
+
+    /**
+     * @description Seleciona o heroi para exclusao, salva seu nome e id para modal
+     * @param heroi a ser excluido
+     */
+    pickHeroToDelete: function(_hero) {
+
+      this.selectedDeleteHero = _hero;
+    },
+
+    /**
+     * @description Excluir heroi e atualiza listagem
+     */
+    deleteHero: function() {
+
+      var _self = this;
+
+      API.deleteHeroById(this.selectedDeleteHero.id, function(data){
+
+        //confirma exclusao do heroi
+        _self.$toastr('success', _self.selectedDeleteHero.name + ' removido da guilda com sucesso.');
+
+        //busca lista novamente
+        _self.getHeroesList(function(){
+
+          deleteModal.modal('hide');
+        });
+      });
     }
   },
   mounted: function() {
 
-    var _self = this;
+    $("#pageTitle").text("Meus Personagens");
 
     //carregando inicialmente lista de heroes
-    API.getHeroList(function(_data){
-
-      _self.heroes = _data;
-
-      //busca imagem dinamica de cada heroi
-      _self.heroes.forEach(function(hero, index){
-
-        hero.displayPhoto = API.apiHost + API.methods.heroPhoto + '/' + hero.photos[0];
-        hero.specialty_name = hero.specialties[0].name;
-      });
-
-      _self.viewHeroes = _.cloneDeep(_self.heroes)
-
-    });
+    this.getHeroesList();
 
   }
 }
