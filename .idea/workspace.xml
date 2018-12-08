@@ -2,19 +2,19 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="d583a480-2366-4879-8e88-36bbd424aa5e" name="Default" comment="">
-      <change type="MOVED" beforePath="$PROJECT_DIR$/heroesapp/dist/index.html" afterPath="$PROJECT_DIR$/heroesapp/docs/index.html" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/heroesapp/dist/static/css/app.e9aac0441edbf5648a3959e83651b75e.css" afterPath="$PROJECT_DIR$/heroesapp/docs/static/css/app.e9aac0441edbf5648a3959e83651b75e.css" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/heroesapp/dist/static/css/app.e9aac0441edbf5648a3959e83651b75e.css.map" afterPath="$PROJECT_DIR$/heroesapp/docs/static/css/app.e9aac0441edbf5648a3959e83651b75e.css.map" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/heroesapp/dist/static/fonts/MaterialIcons-Regular.012cf6a.woff" afterPath="$PROJECT_DIR$/heroesapp/docs/static/fonts/MaterialIcons-Regular.012cf6a.woff" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/heroesapp/dist/static/fonts/MaterialIcons-Regular.570eb83.woff2" afterPath="$PROJECT_DIR$/heroesapp/docs/static/fonts/MaterialIcons-Regular.570eb83.woff2" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/heroesapp/dist/static/fonts/MaterialIcons-Regular.a37b0c0.ttf" afterPath="$PROJECT_DIR$/heroesapp/docs/static/fonts/MaterialIcons-Regular.a37b0c0.ttf" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/heroesapp/dist/static/fonts/MaterialIcons-Regular.e79bfd8.eot" afterPath="$PROJECT_DIR$/heroesapp/docs/static/fonts/MaterialIcons-Regular.e79bfd8.eot" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/heroesapp/dist/static/js/app.0345c40ac836dc3b0f69.js" afterPath="$PROJECT_DIR$/heroesapp/docs/static/js/app.0345c40ac836dc3b0f69.js" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/heroesapp/dist/static/js/app.0345c40ac836dc3b0f69.js.map" afterPath="$PROJECT_DIR$/heroesapp/docs/static/js/app.0345c40ac836dc3b0f69.js.map" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/heroesapp/dist/static/js/manifest.2ae2e69a05c33dfc65f8.js" afterPath="$PROJECT_DIR$/heroesapp/docs/static/js/manifest.2ae2e69a05c33dfc65f8.js" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/heroesapp/dist/static/js/manifest.2ae2e69a05c33dfc65f8.js.map" afterPath="$PROJECT_DIR$/heroesapp/docs/static/js/manifest.2ae2e69a05c33dfc65f8.js.map" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/heroesapp/dist/static/js/vendor.00ee9845c52b1d9e1b5f.js" afterPath="$PROJECT_DIR$/heroesapp/docs/static/js/vendor.00ee9845c52b1d9e1b5f.js" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/heroesapp/dist/static/js/vendor.00ee9845c52b1d9e1b5f.js.map" afterPath="$PROJECT_DIR$/heroesapp/docs/static/js/vendor.00ee9845c52b1d9e1b5f.js.map" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/heroesapp/docs/index.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/heroesapp/docs/static/css/app.e9aac0441edbf5648a3959e83651b75e.css" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/heroesapp/docs/static/css/app.e9aac0441edbf5648a3959e83651b75e.css.map" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/heroesapp/docs/static/fonts/MaterialIcons-Regular.012cf6a.woff" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/heroesapp/docs/static/fonts/MaterialIcons-Regular.570eb83.woff2" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/heroesapp/docs/static/fonts/MaterialIcons-Regular.a37b0c0.ttf" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/heroesapp/docs/static/fonts/MaterialIcons-Regular.e79bfd8.eot" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/heroesapp/docs/static/js/app.0345c40ac836dc3b0f69.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/heroesapp/docs/static/js/app.0345c40ac836dc3b0f69.js.map" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/heroesapp/docs/static/js/manifest.2ae2e69a05c33dfc65f8.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/heroesapp/docs/static/js/manifest.2ae2e69a05c33dfc65f8.js.map" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/heroesapp/docs/static/js/vendor.00ee9845c52b1d9e1b5f.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/heroesapp/docs/static/js/vendor.00ee9845c52b1d9e1b5f.js.map" afterPath="" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
@@ -32,8 +32,8 @@
       <file leaf-file-name="App.vue" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/heroesapp/src/App.vue">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="255">
-              <caret line="48" column="3" lean-forward="true" selection-start-line="48" selection-start-column="3" selection-end-line="48" selection-end-column="3" />
+            <state relative-caret-position="289">
+              <caret line="50" column="12" lean-forward="false" selection-start-line="50" selection-start-column="12" selection-end-line="50" selection-end-column="12" />
               <folding />
             </state>
           </provider>
@@ -234,12 +234,12 @@
       <workItem from="1544112578594" duration="10742000" />
       <workItem from="1544124014953" duration="5675000" />
       <workItem from="1544130986000" duration="175000" />
-      <workItem from="1544224639179" duration="9066000" />
+      <workItem from="1544224639179" duration="9313000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="70898000" />
+    <option name="totallyTimeSpent" value="71145000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -252,9 +252,8 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1382" height="744" extended-state="6" />
-    <editor active="true" />
     <layout>
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.32894737" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
@@ -283,16 +282,6 @@
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/heroesapp/src/main.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding>
-            <element signature="n#!!doc" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/heroesapp/src/assets/js/heroesAPI.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="2244">
@@ -760,10 +749,18 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/docs/index.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/heroesapp/src/App.vue">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="255">
-          <caret line="48" column="3" lean-forward="true" selection-start-line="48" selection-start-column="3" selection-end-line="48" selection-end-column="3" />
+        <state relative-caret-position="289">
+          <caret line="50" column="12" lean-forward="false" selection-start-line="50" selection-start-column="12" selection-end-line="50" selection-end-column="12" />
           <folding />
         </state>
       </provider>
